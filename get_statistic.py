@@ -41,6 +41,6 @@ import csv
 
 
 w = csv.writer(open("output.csv", "w"))
-for key, val in dictionary_obj.items():
+for key, val in sorted(dictionary_obj.items()):
     w.writerow([key, val])
 
