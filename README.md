@@ -19,7 +19,10 @@ sudo chmod +x collect_xml.sh
 #as result - new xml file "data.xml"
 
 python get_statistic.py
-#result - new csv file - "output.csv" - file with statistic
+#result - 3 files:
+#"output_total.csv" - count frames in all xmls files
+#"output_with_light.csv" - count frames in all xmls files with lights_types
+#"summary.xls" - files list with objects and lights
 
 ```
 
