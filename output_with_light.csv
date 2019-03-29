@@ -29,6 +29,9 @@ cell phone_L3,60
 chair_L1,156
 chair_L2,201
 chair_L3,148
+clock_L1,53
+clock_L2,45
+clock_L3,58
 computer_L1,414
 computer_L2,34
 computer_L3,30
@@ -57,7 +60,7 @@ laptop_L1,80
 laptop_L2,81
 laptop_L3,74
 microwave_L1,50
-microwave_L2,43
+microwave_L2,64
 microwave_L3,42
 mouse_L1,117
 mouse_L2,79

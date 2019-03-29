@@ -6,9 +6,12 @@ import csv
 parsedXML = ET.parse("data.xml")
 dfcols = ['filename', 'name', 'xmin', 'ymin', 'xmax', 'ymax']
 
-def getvalueofnode(node):
+def getvalueofnode(node, is_int=0):
     """ return node text or None """
-    return node.text if node is not None else None
+    if is_int==1:
+    	return int(node.text) if node is not None else None
+    elif is_int==0:
+    	return node.text if node is not None else None
 
 
 root = parsedXML.getroot()
@@ -28,7 +31,7 @@ for node in root:
         ymin = obj.find('bndbox/ymin')
         xmax = obj.find('bndbox/xmax')
         ymax = obj.find('bndbox/ymax')
-        df_xml = df_xml.append(pd.Series([getvalueofnode(filename), getvalueofnode(name), getvalueofnode(xmin), getvalueofnode(ymin), getvalueofnode(xmax), getvalueofnode(ymax)], index=dfcols), ignore_index=True)
+        df_xml = df_xml.append(pd.Series([getvalueofnode(filename), getvalueofnode(name), getvalueofnode(xmin, is_int=1), getvalueofnode(ymin, is_int=1), getvalueofnode(xmax, is_int=1), getvalueofnode(ymax, is_int=1)], index=dfcols), ignore_index=True)
 
 print("Total files:", count_files, "\nTotal objects:", count_objects)
 
