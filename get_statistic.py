@@ -1,5 +1,7 @@
 import pandas as pd
 import xml.etree.ElementTree as ET
+import csv
+
 
 parsedXML = ET.parse("data.xml")
 dfcols = ['filename', 'name', 'xmin', 'ymin', 'xmax', 'ymax']
@@ -37,10 +39,39 @@ for obj_name in df_xml['name']:
     else:
         dictionary_obj[obj_name] += 1
 
-import csv
 
-
-w = csv.writer(open("output.csv", "w"))
+w = csv.writer(open("output_total.csv", "w"))
 for key, val in sorted(dictionary_obj.items()):
     w.writerow([key, val])
 
+light_type = []
+for filename in df_xml['filename']:
+    if 'L1' in filename:
+        light_type.append('L1')
+    elif 'L2' in filename:
+        light_type.append('L2')
+    elif 'L3' in filename:
+        light_type.append('L3')
+    else:
+        light_type.append('not_detected')
+        
+df_xml['light_type']=light_type
+df_xml.to_excel('summary.xls')
+
+
+
+
+dictionary_obj = {}
+
+cur_frame = df_xml[['name','light_type']]
+for index, rows in cur_frame.iterrows():
+    obj_name = "{0}_{1}".format(rows['name'], rows['light_type'])
+    if obj_name not in dictionary_obj:
+        dictionary_obj[obj_name] = 1
+    else:
+        dictionary_obj[obj_name] += 1    
+
+
+w = csv.writer(open("output_with_light.csv", "w"))
+for key, val in sorted(dictionary_obj.items()):
+    w.writerow([key, val])
