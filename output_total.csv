@@ -1,38 +1,45 @@
-apple,205
-armchair,98
-backpack,202
+apple,435
+armchair,353
+backpack,619
 banana,218
 bed,78
-book,270
-bottle,392
-bus,3
-car,475
+bench,350
+bicycle,96
+book,452
+bottle,780
+bus,210
+car,1285
 carrot,394
-cell phone,223
-chair,505
-clock,156
-computer,478
-cup,219
-display,241
-door,374
+cat,164
+cell phone,771
+chair,667
+clock,340
+computer,512
+cup,687
+display,410
+dog,12
+door,617
 fork,463
-hair drier,123
-keyboard,273
-knife,229
-laptop,235
+hair drier,169
+keyboard,527
+knife,368
+laptop,394
 microwave,156
-mouse,233
+mouse,612
 orange,159
-oven,22
-person,86
-plate,232
-refrigerator,44
+oven,38
+pedestrian lights,300
+person,1285
+plate,368
+refrigerator,73
 remote,179
-scissors,291
-sink,57
-spoon,351
-stairs,194
-suitcase,82
+scissors,326
+sink,95
+spoon,383
+stairs,332
+suitcase,128
 toilet,22
-toothbrush,37
-traffic light,2
+toothbrush,232
+traffic light,200
+umbrella,155
+vase,218

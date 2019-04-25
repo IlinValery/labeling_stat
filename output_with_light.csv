@@ -1,98 +1,120 @@
 apple_L1,111
-apple_L2,67
-apple_L3,27
-armchair_L2,48
+apple_L2,131
+apple_L3,193
+armchair_L1,112
+armchair_L2,191
 armchair_L3,50
-backpack_L1,75
-backpack_L2,79
-backpack_L3,48
+backpack_L1,183
+backpack_L2,223
+backpack_L3,213
 banana_L1,69
 banana_L2,101
 banana_L3,48
 bed_L1,34
 bed_L2,17
 bed_L3,27
+bench_L1,248
+bench_L2,46
+bench_L3,56
+bicycle_L1,96
 book_L1,116
-book_L2,51
+book_L2,233
 book_L3,103
-bottle_L1,161
-bottle_L2,100
-bottle_L3,131
-bus_L1,3
-car_L1,475
+bottle_L1,190
+bottle_L2,237
+bottle_L3,353
+bus_L1,210
+car_L1,1195
+car_L2,57
+car_L3,33
 carrot_L1,196
 carrot_L2,68
 carrot_L3,130
-cell phone_L1,92
-cell phone_L2,71
-cell phone_L3,60
-chair_L1,156
-chair_L2,201
-chair_L3,148
-clock_L1,53
-clock_L2,45
-clock_L3,58
+cat_L2,164
+cell phone_L1,103
+cell phone_L2,418
+cell phone_L3,250
+chair_L1,190
+chair_L2,328
+chair_L3,149
+clock_L1,84
+clock_L2,182
+clock_L3,74
 computer_L1,414
-computer_L2,34
+computer_L2,68
 computer_L3,30
-cup_L1,115
-cup_L2,53
-cup_L3,51
-display_L1,79
-display_L2,87
-display_L3,75
-door_L1,357
-door_L2,16
-door_L3,1
+cup_L1,177
+cup_L2,198
+cup_L3,312
+display_L1,129
+display_L2,188
+display_L3,93
+dog_L1,12
+door_L1,444
+door_L2,104
+door_L3,69
 fork_L1,212
 fork_L2,136
 fork_L3,115
 hair drier_L1,62
-hair drier_L2,27
-hair drier_L3,34
-keyboard_L1,78
-keyboard_L2,132
-keyboard_L3,63
+hair drier_L2,42
+hair drier_L3,65
+keyboard_L1,115
+keyboard_L2,310
+keyboard_L3,102
 knife_L1,78
-knife_L2,70
-knife_L3,81
-laptop_L1,80
-laptop_L2,81
-laptop_L3,74
+knife_L2,126
+knife_L3,164
+laptop_L1,87
+laptop_L2,178
+laptop_L3,129
 microwave_L1,50
 microwave_L2,64
 microwave_L3,42
-mouse_L1,117
-mouse_L2,79
-mouse_L3,37
+mouse_L1,164
+mouse_L2,283
+mouse_L3,165
 orange_L1,63
 orange_L2,58
 orange_L3,38
-oven_L1,22
-person_L1,86
+oven_L1,38
+pedestrian lights_L1,201
+pedestrian lights_L2,87
+pedestrian lights_L3,12
+person_L1,1131
+person_L2,108
+person_L3,46
 plate_L1,120
-plate_L2,65
-plate_L3,47
+plate_L2,117
+plate_L3,131
 refrigerator_L1,23
-refrigerator_L2,11
+refrigerator_L2,40
 refrigerator_L3,10
 remote_L1,84
 remote_L2,33
 remote_L3,62
 scissors_L1,129
-scissors_L2,68
+scissors_L2,103
 scissors_L3,94
-sink_L1,46
-sink_L2,11
+sink_L1,76
+sink_L2,19
 spoon_L1,185
 spoon_L2,60
-spoon_L3,106
-stairs_L1,183
-stairs_L3,11
+spoon_L3,138
+stairs_L1,317
+stairs_L2,2
+stairs_L3,13
+suitcase_L1,46
 suitcase_L2,67
 suitcase_L3,15
 toilet_L1,22
 toothbrush_L1,12
-toothbrush_L2,11
-toothbrush_L3,14
-traffic light_L1,2
+toothbrush_L2,108
+toothbrush_L3,112
+traffic light_L1,141
+traffic light_L2,50
+traffic light_L3,9
+umbrella_L1,144
+umbrella_L3,11
+vase_L1,111
+vase_L3,107

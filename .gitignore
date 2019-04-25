@@ -1,5 +1,9 @@
 /.ipynb_checkpoints/
 /catalog/
+
+/augmentation_data/*
+!/augmentation_data/folder
+
 /env/
 /venv/
 /.idea/
