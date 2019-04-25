@@ -2,6 +2,7 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 import csv
 
+print("Collect statistic start!")
 
 parsedXML = ET.parse("data.xml")
 dfcols = ['filename', 'name', 'xmin', 'ymin', 'xmax', 'ymax']
@@ -43,7 +44,7 @@ for obj_name in df_xml['name']:
         dictionary_obj[obj_name] += 1
 
 
-w = csv.writer(open("output_total.csv", "w"))
+w = csv.writer(open("stat_info/output_total.csv", "w"))
 for key, val in sorted(dictionary_obj.items()):
     w.writerow([key, val])
 
@@ -59,7 +60,7 @@ for filename in df_xml['filename']:
         light_type.append('not_detected')
         
 df_xml['light_type']=light_type
-df_xml.to_excel('summary.xls')
+df_xml.to_excel('stat_info/summary.xls')
 
 
 
@@ -75,6 +76,6 @@ for index, rows in cur_frame.iterrows():
         dictionary_obj[obj_name] += 1    
 
 
-w = csv.writer(open("output_with_light.csv", "w"))
+w = csv.writer(open("stat_info/output_with_light.csv", "w"))
 for key, val in sorted(dictionary_obj.items()):
     w.writerow([key, val])

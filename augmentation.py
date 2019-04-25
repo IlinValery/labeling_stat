@@ -21,14 +21,15 @@ additional_augmentation = args.additional
 folder = args.folder
 video_number = args.videoname
 
+
 path_to_source = folder + "output/"
 path_to_augment = folder + "augment/"
+
 os.system("rm -rf {0}".format(path_to_augment))
 os.system("rm -rf {0}".format(path_to_source))
 
 
 p = Augmentor.Pipeline(folder)
-os.mkdir(path_to_augment)
 
 p.rotate(probability=0.7, max_left_rotation=10, max_right_rotation=10)
 p.zoom(probability=0.5, min_factor=1.1, max_factor=1.2)
@@ -37,13 +38,10 @@ p.flip_top_bottom(0.5)
 p.flip_left_right(0.5)
 
 p.sample(additional_augmentation)
-
 p.process()
 
-
-
-
 lst = os.listdir(path_to_source)
+os.mkdir(path_to_augment)
 
 cur_number = 0
 for file in lst:
@@ -51,8 +49,6 @@ for file in lst:
     cur_light = file.split('_')[1]
     cur_source_file = file.split('_')[2]
     cur_frame = file.split('_')[7]
-    #print(file)
-    #print(file.split('_'), cur_class, cur_number)
     filename = path_to_augment+"aug_"+cur_class+"_"+cur_light+"_"+video_number+"_"+str(cur_number)+"_"+"from_"+cur_source_file+"_"+cur_frame+".jpg"
     print("Create file:", filename)
     image = cv2.imread(str(path_to_source)+str(file))
