@@ -2,23 +2,24 @@
 
 ## VENV setup
 ```bash
-python3 -m venv env
-source env/bin/activate
+$ python3 -m venv env
+$ source env/bin/activate
 #for deactivate use "deactivate" in command line
-pip install -r req.txt
+$ pip install -r req.txt
 ```
 
 ## Folder setup and run
 
 ```bash
-mkdir catalog
 #move all dirs from 4_Сводка to catalog/
 
-sudo chmod +x collect_xml.sh
-./collect_xml.sh
+$ sudo chmod +x collect_xml.sh
+$ ./collect_xml.sh
+
 #as result - new xml file "data.xml"
 
-python get_statistic.py
+$ python get_statistic.py
+
 #result - 3 files:
 #"output_total.csv" - count frames in all xmls files
 #"output_with_light.csv" - count frames in all xmls files with lights_types
@@ -28,7 +29,7 @@ python get_statistic.py
 
 ## Use Jupyter
 ```bash
-jupyter notebook #from terminal
+$ jupyter notebook #from terminal
 #open pandas_analys and relax
 
 ```
@@ -37,7 +38,7 @@ jupyter notebook #from terminal
 Here we use [Augmentor](https://github.com/mdbloice/Augmentor) and [Tensorflow.image](https://www.tensorflow.org/api_docs/python/tf/image) module instruments for Python3.
 <br>For launch help of our Augmetator we need to use
 ```bash
-python augmentation.py --help
+$ python augmentation.py --help
 
 usage: augmentation.py [-h] [--folder FOLDER] [--videoname VIDEONAME]
                        [--additional ADDITIONAL]
@@ -54,5 +55,5 @@ optional arguments:
 ``` 
 For correct launch script use:
 ```bash
-python augmentation.py --folder augmentation_data/carrot_L2_002/ --videoname 004
+$ python augmentation.py --folder augmentation_data/carrot_L2_002/ --videoname 004
 ```
