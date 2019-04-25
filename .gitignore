@@ -1,5 +1,5 @@
 /.ipynb_checkpoints/
-/catalog/
+/catalog/*
 
 /augmentation_data/*
 !/augmentation_data/folder_info
