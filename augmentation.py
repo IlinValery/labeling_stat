@@ -2,18 +2,32 @@ import Augmentor
 import tensorflow as tf
 import cv2
 import os
+import argparse
 
-additional_augmentation = 5
-folder = "augmentation_data/carrot_L1_001"
-video_number = "004"
-path_to_source = folder + "/output/"
-path_to_augment = folder + "/augment/"
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--folder", type=str,
+                    help="Folder with *.jpg files. for example: --folder augmentation_data/carrot_L2_002/")
+parser.add_argument("--videoname", type=str,
+                    help="Video number for files *.jpg. For example: 004")
+parser.add_argument("--additional", type=int,
+                    help="Count of additional files. System create same count augmented data plus --additional count",
+                    default=0)
+args = parser.parse_args()
+
+
+additional_augmentation = args.additional
+folder = args.folder
+video_number = args.videoname
+
+path_to_source = folder + "output/"
+path_to_augment = folder + "augment/"
 os.system("rm -rf {0}".format(path_to_augment))
 os.system("rm -rf {0}".format(path_to_source))
 
 
 p = Augmentor.Pipeline(folder)
-
 os.mkdir(path_to_augment)
 
 p.rotate(probability=0.7, max_left_rotation=10, max_right_rotation=10)
@@ -39,8 +53,8 @@ for file in lst:
     cur_frame = file.split('_')[7]
     #print(file)
     #print(file.split('_'), cur_class, cur_number)
-    filename = path_to_augment+"aug_"+cur_class+"_"+cur_light+"_"+video_number+"_"+str(cur_number)+"_"+"from"+cur_source_file+"_"+cur_frame+".jpg"
-    print(filename)
+    filename = path_to_augment+"aug_"+cur_class+"_"+cur_light+"_"+video_number+"_"+str(cur_number)+"_"+"from_"+cur_source_file+"_"+cur_frame+".jpg"
+    print("Create file:", filename)
     image = cv2.imread(str(path_to_source)+str(file))
     rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     tf_img = tf.convert_to_tensor(rgb)
@@ -58,3 +72,5 @@ for file in lst:
         sess.run(fwrite)
 
     cur_number+=1
+
+os.system("rm -rf {0}".format(path_to_source))

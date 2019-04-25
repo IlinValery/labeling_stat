@@ -2,8 +2,8 @@
 /catalog/
 
 /augmentation_data/*
-!/augmentation_data/folder
-
+!/augmentation_data/folder_info
+!/catalog/folder_info
 /env/
 /venv/
 /.idea/

@@ -32,3 +32,27 @@ jupyter notebook #from terminal
 #open pandas_analys and relax
 
 ```
+
+## Data Augmentation
+Here we use [Augmentor](https://github.com/mdbloice/Augmentor) and [Tensorflow.image](https://www.tensorflow.org/api_docs/python/tf/image) module instruments for Python3.
+<br>For launch help of our Augmetator we need to use
+```bash
+python augmentation.py --help
+
+usage: augmentation.py [-h] [--folder FOLDER] [--videoname VIDEONAME]
+                       [--additional ADDITIONAL]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --folder FOLDER       Folder with *.jpg files. for example: --folder
+                        augmentation_data/carrot_L2_002/
+  --videoname VIDEONAME
+                        Video number for files *.jpg. For example: 004
+  --additional ADDITIONAL
+                        Count of additional files. System create same count
+                        augmented data plus --additional count
+``` 
+For correct launch script use:
+```bash
+python augmentation.py --folder augmentation_data/carrot_L2_002/ --videoname 004
+```
